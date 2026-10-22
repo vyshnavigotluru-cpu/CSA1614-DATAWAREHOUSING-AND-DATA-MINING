@@ -1,0 +1,18 @@
+names = c("siri", "mahi", "chiru")
+age = c(23, 24, 25)
+marks = c(88, 78, 25)
+
+df = data.frame(names, age, marks)
+
+# Mean
+print(mean(df$age))
+
+# Median
+print(median(df$age))
+
+# Mode
+age_data = c(23, 24, 24, 25, 24)
+mode_value = as.numeric(names(which.max(table(age_data))))
+print(mode_value)
+
+write.csv(df, "datafr.csv", row.names = FALSE)
